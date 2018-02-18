@@ -25,7 +25,7 @@ SECRET_KEY = '1a)9tqg$(xcdt*%2bjt##*zeuxbek5dqwt(zkuvx4ab2(g4!lm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.theindependentman.com']
+ALLOWED_HOSTS = ['www.theindependentman.com','127.0.0.1']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'timsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'main',
+        'USER': 'postgres',
+
+        'HOST': 'timdb.cqwha35rkrw2.us-east-2.rds.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
