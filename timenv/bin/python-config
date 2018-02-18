@@ -1,4 +1,4 @@
-#!/home/ubuntu/timenv/bin/python
+#!/home/ubuntu/tim/timenv/bin/python
 
 import sys
 import getopt
