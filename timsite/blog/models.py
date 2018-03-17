@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 
@@ -29,9 +30,12 @@ class Post(models.Model):
     def pt_to_html(self):
         # Converts plain-text input in the body to html <p> tags
 
-        # Currently it's only in test mode, not full-function
         self.body = self.body.replace('\r\n\r\n', '</p><p>')
-        self.body = '<p>' + self.body + '</p>'
+        if self.body[0:3] != '<p>':
+            self.body = '<p>' + self.body
+
+        if self.body[-4:] != '</p>':
+            self.body += '</p>'
 
     def save(self, *args, **kwargs):
 
@@ -40,5 +44,7 @@ class Post(models.Model):
             self.pub_date = timezone.now()
 
         self.pt_to_html()
+
+        self.slug = slugify(self.title)
 
         super(Post, self).save(*args, **kwargs)
