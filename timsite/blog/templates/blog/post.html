@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    <article class="box">
+        <h1>{{ post.title }}</h1>
+        <div class="date">{{ post.pub_date.date}}</div>
+        {{ post.body|safe }}
+    </article>
+
+{% endblock %}

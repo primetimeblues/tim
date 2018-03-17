@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>Holding the World</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% load static %}
+<link rel="stylesheet" href="{% static 'blog/reset.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Paprika|Hind+20px|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'blog/base.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/layout.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/modules.css' %}" />
+<link rel="stylesheet" href="{% static 'blog/style.css' %}" />
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Holding The World</h1>
+    <h2>Learning and self-improvement</h2>
+</header>
+
+<!-- Grid -->
+<div class="clearfix grid">
+
+    <nav class="col w1">
+        <ul class="horiz s3 var-vert">
+            <li><a href="/" class="button">Home</a></li>
+            <li><a href="{% url 'blog:about' %}" class="button">About</a></li>
+{#            <li><a href="" class="button">Start here</a></li>#}
+            <li><a href="{% url 'blog:archives' %}" class="button">Archives</a></li>
+{#            <li><a href="" class="button">Tools</a></li>#}
+        </ul>
+    </nav>
+
+{#    Blog entries #}
+    <div class="col w2">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- Side-bar -->
+    <div class="col w3">
+
+        <!-- About Card -->
+{#        {% if not about %}#}
+
+            <aside class="box">
+                <h1>What is this?</h1>
+                <p>
+                    My name is David. This blog is a glance into my journey as I strive towards my optimal self. I draw from topics of
+                    science, philosophy, and art as a way to understand the world and myself in it. I hope what I share on here
+                    can help you in your own life journey.
+                </p>
+            </aside>
+
+{#        {% endif %}#}
+
+            {# Popular posts) #}
+{%  comment %}        <aside class="box">
+            <h1>Popular Posts</h1>
+            <ul class="vert">
+                <li>
+                    <a href="" class="button">
+                        <h2>Lorem</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="button">
+                        <h2>Ipsum</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="button">
+                        <h2>Dorum</h2>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="button">
+                        <h2>Mingsum</h2>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Labels / tags -->
+        <aside class="box">
+            <h4>Tags</h4>
+            <ul class="tags">
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>D</li>
+                <li>E</li>
+                <li>F</li>
+            </ul>
+        </aside>{% endcomment %}
+
+    </div>
+
+</div>
+<!-- END GRID -->
+<br>
+<!-- Footer -->
+<footer>
+    <ul class="horiz s1">
+        <li>Copyright 2018</li>
+{#        <li>Contact</li>#}
+    </ul>
+</footer>
+
+</body>
+</html>

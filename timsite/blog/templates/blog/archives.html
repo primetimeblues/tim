@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+    <article class="box">
+        <dl>
+            {% for pair in year_post_iterator %}
+
+                <dt><time>{{ pair.0 }}</time></dt>
+                <dd>
+                    <dl>
+                        {% for post in pair.1 %}
+                            <dt><time>{{ post.pub_date|date:"F d" }}</time></dt><dd><a href="{% url 'blog:post' post.slug %}">{{ post.title }}</a></dd>
+                        {% endfor %}
+                    </dl>
+                </dd>
+
+            {% endfor %}
+
+        </dl>
+    </article>
+
+{% endblock %}
