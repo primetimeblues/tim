@@ -25,7 +25,7 @@ SECRET_KEY = '1a)9tqg$(xcdt*%2bjt##*zeuxbek5dqwt(zkuvx4ab2(g4!lm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.theindependentman.com', '127.0.0.1', '13.58.197.21']
+ALLOWED_HOSTS = ['www.theindependentman.com', 'theindependentman.com', 'www.holdingthe.world', 'holdingthe.world', '127.0.0.1', '13.58.197.21']
 
 
 # Application definition
