@@ -1,0 +1,91 @@
+/* Set sizes to include margins */
+html{box-sizing:border-box}
+*,*:before,*:after{box-sizing:inherit}
+
+/* Clearfix hack */
+.clearfix:after,.clearfix:before{content:"";display:table;clear:both}
+
+/* Clearfix on the box */
+.box:after,.box:before{content:"";display:table;clear:both}
+
+.grid{
+    margin:auto;
+    max-width:1300px;
+}
+
+/* Default small-screen column behaviour */
+.col{
+    float: left;
+    width: 100%;
+}
+.col > *{
+    margin: 1em 0.4em;
+}
+
+.box{
+    padding-bottom: 1em;
+}
+
+/* Automatically includes margins around items inside the boxes */
+.box > *{
+    margin: 1em 32px 1em 32px;
+}
+
+/* Horizontal lists, layout and borders */
+.horiz{
+    margin: 0;
+}
+.horiz > *{
+    float: left;
+}
+
+.horiz.s1 > *{width: 100%}
+.horiz.s2 > *{width: 50%}
+.horiz.s3 > *{width: 33.33333%}
+.horiz.s5 > *{width:20%}
+
+
+.horiz > li > a{
+    width: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+/* Vertical lists, layout and borders */
+.vert{
+    margin: 0;
+}
+.vert > li > a{
+    width: 100%;
+    border-left: none;
+    border-right: none;
+}
+.vert > li+li > a{
+    border-top: none;
+}
+
+aside .button{
+    text-align: left;
+}
+
+/* Screen width variable behaviour */
+@media (min-width:993px){
+    nav{margin-top: 1em}
+    header{
+        min-height: 300px;
+    }
+    header > h1{font-size: 2.5em;padding-top: 1.6em}
+    header > h2{font-size: 1.5em;padding-top: 0.6em;}
+
+    .var-vert > *{float: none;width: 100%!important}
+    .var-vert{margin: 0}
+    .var-vert > li > a{width: 100%;}
+    .col.w1 > *{margin-left: 0;margin-right: 0em}
+    .col.w2 > *{margin-left: 1em;margin-right: 0.5em}
+    .col.w3 > *{margin-left: 0.5em;margin-right: 0.5em}
+    .col.w1{width:10%}
+    .col.w2{width:60%}
+    .col.w3{width:30%}
+
+}
+
