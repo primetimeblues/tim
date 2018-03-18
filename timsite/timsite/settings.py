@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1a)9tqg$(xcdt*%2bjt##*zeuxbek5dqwt(zkuvx4ab2(g4!lm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.holdingthe.world', 'holdingthe.world', '127.0.0.1', '13.58.197.21']
 
