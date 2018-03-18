@@ -6,9 +6,7 @@
         <article class="box">
             <h1>{{ post.title }}</h1>
             <div class="date">{{ post.pub_date.date}}</div>
-            <p>
-                {{ post.snippet }}
-            </p>
+                {{ post.snippet|safe }}
             <a href="{% url 'blog:post' post.slug %}" class="button">READ MORE »</a>
         </article>
     {% endfor %}
