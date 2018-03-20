@@ -55,6 +55,14 @@ article > h1{
     text-align: center;
 }
 
+em {
+    font-style: italic;
+}
+
+i {
+    font-style: italic;
+}
+
 dl {
 padding: 1.2em;
 }
