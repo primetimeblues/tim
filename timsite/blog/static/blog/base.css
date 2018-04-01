@@ -55,6 +55,10 @@ article > h1{
     text-align: center;
 }
 
+article > ol{
+    list-style-type: decimal;
+}
+
 em {
     font-style: italic;
 }
