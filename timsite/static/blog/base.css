@@ -57,6 +57,7 @@ article > h1{
 
 article > ol{
     list-style-type: decimal;
+    padding-left: 2.5em;
 }
 
 em {
